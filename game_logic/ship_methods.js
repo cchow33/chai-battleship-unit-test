@@ -7,7 +7,7 @@ function checkForShip(player, coordinates){
     ship = player.ships[i];
     // Filter ships location array by comparing values to given coordinates
     shipPresent = ship.locations.filter(function(actualCoordinate){
-      // return an array with only coordainates that match
+      // return an array with only coordinates that match
       return (actualCoordinate[0] === coordinates[0]) && (actualCoordinate[1] === coordinates[1]);
     })[0]; // The first member of an empty array is undefined
 
@@ -21,7 +21,14 @@ function checkForShip(player, coordinates){
     ship.damage.push(coordinates);
   }
 
-  function fire(player, coordainates)
+  function fire(player, coordainates){
+    var ship = checkForShip(player, coordainates);
+
+    if(ship){
+      damageShip(ship, coordainates);{
+      }
+    }
+  }
 
 // Export using module
 module.exports.checkForShip = checkForShip;
