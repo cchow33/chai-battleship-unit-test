@@ -91,5 +91,6 @@ describe('damageShip', function () {
       locations: [[0, 0]],
       damage: []
     };
+    damageShipe(ship, [0,0]);
   });
 });
