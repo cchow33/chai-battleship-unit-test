@@ -92,5 +92,7 @@ describe('damageShip', function () {
       damage: []
     };
     damageShipe(ship, [0,0]);
+
+    expect(ship.damage).to.not.be.empty;
   });
 });
