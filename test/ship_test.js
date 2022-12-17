@@ -1,7 +1,7 @@
 // import expect from chai
 var expect = require('chai').expect;
 
-// Set up new suite:
+// SUITE #1: CHECKFORSHIPS
 // Spec #1: Test to check when a ship is not located at the given coordinates:
 describe('checkForShip', function(){
   // import 'checkForShip so all our tests in the suite can access it. Code will break because we haven't made this file yet:
@@ -82,3 +82,14 @@ it('should handle checking MULTIPLE ships', function(){
   
 });
 
+// SUITE #2: CHECKFORDAMAGES
+describe('damageShip', function () {
+  var damageShip = request('../game_logic/ship_methods').damageShip;
+
+  it('should register damage on a given ship at a given location', function () { 
+    var ship = {
+      locations: [[0, 0]],
+      damage: []
+    };
+  });
+});
