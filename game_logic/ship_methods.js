@@ -18,10 +18,8 @@ function checkForShip(player, coordinates){
   return false;
 
   function damageShip(ship, coordinates){
-
-
+    ship.damage.push(coordinates);
   }
-
 
 }
 
