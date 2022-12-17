@@ -91,10 +91,33 @@ describe('damageShip', function () {
       locations: [[0, 0]],
       damage: []
     };
-    damageShipe(ship, [0,0]);
+    damageShip(ship, [0,0]);
 
     expect(ship.damage).to.not.be.empty;
     // check that first element of damage array is:
     expect(ship.damage[0]).to.deep.equal([0,0]);
   });
 });
+
+// SUITE #3 FIRE
+describe('fire', function() {
+  // import fire() so it's available to all specs
+  var fire = require('../game_logic/ship_methods').fire;
+
+  // spec to test fire's behavior, 
+  it('should record damage on the given players ship at a given coordinate', function () {
+    var player = {
+      ship: [
+        {
+          locations: [[0, 0]],
+          damage: []
+        }
+      ]
+    };
+    
+    fire(player, [0, 0]);
+  })
+})
+
+  expect(player.ship[0].damage[0]).to.deep.equal[(0,0)];
+
