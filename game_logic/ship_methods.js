@@ -16,7 +16,15 @@ function checkForShip(player, coordinates){
     } 
   }
   return false;
+
+  function damageShip(ship, coordinates){
+
+
+  }
+
+
 }
 
 // Export using module
 module.exports.checkForShip = checkForShip;
+module.exports.damageShip = damageShip;
